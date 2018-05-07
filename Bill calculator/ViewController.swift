@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Bill calculator
 //
-//  Created by Hell Yeah on 5/7/18.
+//  Created by Matej Knazik on 5/7/18.
 //  Copyright © 2018 Matej Knazik. All rights reserved.
 //
 
@@ -16,6 +16,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var costLabel: UILabel!
     
+    
+    // total cost label update
     func updateTotalCosts() {
         var total = 0
         for item in items {
@@ -46,8 +48,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         tableCell.countLabel.text = "\(items[indexPath.row].count)x"
         
         tableCell.delegate = self
-        tableCell.indexPath = indexPath.row
-        tableCell.items = items
+        tableCell.index = indexPath.row
         
         
         return tableCell
@@ -72,7 +73,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         vc.delegate = self
     }
     
-    
+    // add item to table
     func addItem(name: String!, price: Int!) {
         items.append(Item(name: name, price: price))
         tableView.reloadData()
@@ -80,14 +81,14 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func changeCount(newCount: Int, index: Int) {
-        if newCount < 1 {
+        if newCount < 1 { // if count is zero delete item from table
             items.remove(at: index)
             updateTotalCosts()
             tableView.deleteRows(at: [IndexPath(row: index,section: 0)], with: .fade)
             // just update of indices of obects in cells
             for i in index..<tableView.numberOfRows(inSection: 0) {
                 let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as! ItemTableViewCell
-                cell.indexPath = i
+                cell.index = i
             }
         } else {
             items[index].count = newCount
@@ -100,6 +101,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 
 }
 
+
+
+// class for item
 class Item {
     var itemName = ""
     var count = 1
@@ -110,14 +114,5 @@ class Item {
         self.itemName = name
         self.price = price
     }
-    
-    func increase() {
-        count += 1
-    }
-    
-    func decrease() {
-        count -= 1
-    }
-    
 }
 

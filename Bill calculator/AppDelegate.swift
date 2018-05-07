@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Bill calculator
 //
-//  Created by Hell Yeah on 5/7/18.
+//  Created by Matej Knazik on 5/7/18.
 //  Copyright © 2018 Matej Knazik. All rights reserved.
 //
 

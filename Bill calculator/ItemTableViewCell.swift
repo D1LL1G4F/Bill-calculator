@@ -2,7 +2,7 @@
 //  ItemTableViewCell.swift
 //  Bill calculator
 //
-//  Created by Hell Yeah on 5/7/18.
+//  Created by Matej Knazik on 5/7/18.
 //  Copyright © 2018 Matej Knazik. All rights reserved.
 //
 
@@ -12,19 +12,21 @@ protocol ChangeCount {
     func changeCount(newCount: Int, index: Int)
 }
 
+
+// class for cell in table
 class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var strepper: UIStepper!
     
+    
     var delegate: ChangeCount?
-    var indexPath: Int?
-    var items: [Item] = []
+    var index: Int?
     
     
     @IBAction func valueChanged(_ sender: UIStepper) {
-        delegate?.changeCount(newCount: Int(sender.value), index: indexPath!)
+        delegate?.changeCount(newCount: Int(sender.value), index: index!)
     }
     
     override func awakeFromNib() {
