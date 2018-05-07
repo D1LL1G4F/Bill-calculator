@@ -10,91 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bill calculator/ViewController.swift"
-            timestampString = "547390130.720517"
+            timestampString = "547391846.7246161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "Item"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bill calculator/ItemTableViewCell.swift"
-            timestampString = "547391581.333546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "ItemTableViewCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bill_calculator.ItemTableViewCell.strepper.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIStepper&gt;"
-                  moduleName = "Bill calculator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hellyeah/Desktop/Bill%20calculator/Bill%20calculator/ItemTableViewCell.swift"
-                  timestampString = "547391582.719246"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bill_calculator.ItemTableViewCell.strepper.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIStepper&gt;"
-                  moduleName = "Bill calculator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hellyeah/Desktop/Bill%20calculator/Bill%20calculator/ItemTableViewCell.swift"
-                  timestampString = "547391582.730882"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bill_calculator.ItemTableViewCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Bill_calculator.ItemTableViewCell"
-                  moduleName = "Bill calculator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hellyeah/Desktop/Bill%20calculator/Bill%20calculator/ItemTableViewCell.swift"
-                  timestampString = "547391582.73849"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bill_calculator.ItemTableViewCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bill_calculator.ItemTableViewCell&gt;"
-                  moduleName = "Bill calculator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hellyeah/Desktop/Bill%20calculator/Bill%20calculator/ItemTableViewCell.swift"
-                  timestampString = "547391582.745299"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "138">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

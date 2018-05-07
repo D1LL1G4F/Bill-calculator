@@ -54,6 +54,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     func changeCount(newCount: Int, index: Int) {
         items[index].count = newCount
+        tableView.reloadData()
     }
 
 
