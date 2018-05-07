@@ -14,6 +14,7 @@
 		9F2FA2F520A061B700A1D9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FA2F420A061B700A1D9CB /* Assets.xcassets */; };
 		9F2FA2F820A061B700A1D9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FA2F620A061B700A1D9CB /* LaunchScreen.storyboard */; };
 		9F2FA30020A065BE00A1D9CB /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FA2FF20A065BE00A1D9CB /* ItemTableViewCell.swift */; };
+		9F2FA30220A07BC600A1D9CB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2FA30120A07BC600A1D9CB /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9F2FA2F720A061B700A1D9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F2FA2F920A061B700A1D9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F2FA2FF20A065BE00A1D9CB /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		9F2FA30120A07BC600A1D9CB /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9F2FA2F620A061B700A1D9CB /* LaunchScreen.storyboard */,
 				9F2FA2F920A061B700A1D9CB /* Info.plist */,
 				9F2FA2F120A061B700A1D9CB /* Bill_calculator.xcdatamodeld */,
+				9F2FA30120A07BC600A1D9CB /* AddItemViewController.swift */,
 			);
 			path = "Bill calculator";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2FA30220A07BC600A1D9CB /* AddItemViewController.swift in Sources */,
 				9F2FA30020A065BE00A1D9CB /* ItemTableViewCell.swift in Sources */,
 				9F2FA2ED20A061B700A1D9CB /* ViewController.swift in Sources */,
 				9F2FA2EB20A061B700A1D9CB /* AppDelegate.swift in Sources */,

@@ -8,15 +8,23 @@
 
 import UIKit
 
+protocol ChangeCount {
+    func changeCount(newCount: Int, index: Int)
+}
+
 class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var strepper: UIStepper!
     
+    var delegate: ChangeCount?
+    var indexPath: Int?
+    var items: [Item] = []
+    
     
     @IBAction func valueChanged(_ sender: UIStepper) {
-        //
+        delegate?.changeCount(newCount: Int(sender.value), index: indexPath!)
     }
     
     override func awakeFromNib() {
