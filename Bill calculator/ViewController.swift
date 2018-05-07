@@ -12,6 +12,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     var items: [Item] = []
     
+    @IBOutlet weak var clearButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var costLabel: UILabel!
     
@@ -23,9 +24,20 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         costLabel.text = "\(total)Kc"
     }
     
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
+    
+    @IBAction func resetButtonActivated(_ sender: Any) {
+        items.removeAll()
+        tableView.reloadData()
+        updateTotalCosts()
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
@@ -37,6 +49,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         tableCell.indexPath = indexPath.row
         tableCell.items = items
         
+        
         return tableCell
         
     }
@@ -44,16 +57,21 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! AddItemViewController
         vc.delegate = self
     }
+    
     
     func addItem(name: String!, price: Int!) {
         items.append(Item(name: name, price: price))
@@ -62,9 +80,21 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func changeCount(newCount: Int, index: Int) {
-        items[index].count = newCount
-        tableView.reloadData()
-        updateTotalCosts()
+        if newCount < 1 {
+            items.remove(at: index)
+            updateTotalCosts()
+            tableView.deleteRows(at: [IndexPath(row: index,section: 0)], with: .fade)
+            // just update of indices of obects in cells
+            for i in index..<tableView.numberOfRows(inSection: 0) {
+                let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as! ItemTableViewCell
+                cell.indexPath = i
+            }
+        } else {
+            items[index].count = newCount
+            tableView.reloadData()
+            updateTotalCosts()
+        }
+        
     }
 
 
