@@ -13,6 +13,15 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var items: [Item] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var costLabel: UILabel!
+    
+    func updateTotalCosts() {
+        var total = 0
+        for item in items {
+            total += item.count * item.price
+        }
+        costLabel.text = "\(total)Kc"
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -35,7 +44,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,11 +58,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func addItem(name: String!, price: Int!) {
         items.append(Item(name: name, price: price))
         tableView.reloadData()
+        updateTotalCosts()
     }
     
     func changeCount(newCount: Int, index: Int) {
         items[index].count = newCount
         tableView.reloadData()
+        updateTotalCosts()
     }
 
 
@@ -68,6 +78,7 @@ class Item {
     convenience init(name: String, price: Int) {
         self.init()
         self.itemName = name
+        self.price = price
     }
     
     func increase() {

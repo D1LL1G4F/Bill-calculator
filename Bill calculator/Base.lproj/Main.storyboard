@@ -100,6 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="costLabel" destination="EW9-NI-luW" id="KqZ-hy-dFC"/>
                         <outlet property="tableView" destination="61j-vo-Fx7" id="ZUa-cO-8cF"/>
                     </connections>
                 </viewController>
